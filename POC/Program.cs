@@ -26,12 +26,21 @@ namespace POC
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.Use(middleware: (HttpContext context, RequestDelegate next) =>
+            {
+                
+                return next(context);
+            });
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Home}/{action=Authenticate}/{id?}");
+
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("Hello world!");
+            });
 
             app.Run();
         }
