@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateLearning", "Delegat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{42A11117-AE85-42C6-AD29-775AC4343915}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate2", "Delegate2\Delegate2.csproj", "{C350296B-4E53-4D84-AC2E-292A69A17E6D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C350296B-4E53-4D84-AC2E-292A69A17E6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C350296B-4E53-4D84-AC2E-292A69A17E6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C350296B-4E53-4D84-AC2E-292A69A17E6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C350296B-4E53-4D84-AC2E-292A69A17E6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

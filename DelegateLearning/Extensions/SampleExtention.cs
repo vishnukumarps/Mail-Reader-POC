@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace DelegateLearning.Extensions
+namespace DelegateLearning.Extensions;
+
+public static class SampleExtention
 {
-    internal class SampleExtention
+    public static IEnumerable<TSource> CustomFilter<TSource>(this IEnumerable<TSource> source, Func<TSource, bool> predicate) where TSource : class 
     {
+
+        List<TSource> list = new List<TSource>();
+
+        foreach (TSource item in source)
+        {
+            if (predicate(item))
+            {
+                list.Add(item); 
+            }
+        }
+        return list.Count >0 ? list: new List<TSource>();
     }
+   
 }

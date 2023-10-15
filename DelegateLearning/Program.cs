@@ -1,4 +1,5 @@
 ﻿using DelegateLearning.Events;
+using DelegateLearning.Extensions;
 using Learn;
 
 namespace DelegateLearning
@@ -13,6 +14,8 @@ namespace DelegateLearning
 
             UserEventManager userEventManager = new UserEventManager();
             userEventManager.CreateUser(new User() { MyProperty=1000});
+
+            new List<User>() { }.CustomFilter((x) => { return x.MyProperty >100; });
         }
     }
 }
@@ -20,7 +23,7 @@ namespace DelegateLearning
 /// Simple Exmaples
 /// Action
 /// Func 
-/// 
+/// public EventHandler<ClassName> OnClassNameEventName
 
 namespace Learn
 {
@@ -77,7 +80,7 @@ namespace Learn
             Console.WriteLine("user Email");
         }
 
-        public bool SendEmail(User user,int flag=0)
+        public bool SendEmail(User user,int flag)
         {
             Console.WriteLine($"user Email {flag}");
             return true;
