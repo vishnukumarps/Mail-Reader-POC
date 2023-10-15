@@ -13,9 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F5497DDC-5745-4A81-BA1A-15333EFC6985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample", "Sample\Sample.csproj", "{F36FE14D-67B7-4B07-B6B4-F4310F314EB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample", "Sample\Sample.csproj", "{F36FE14D-67B7-4B07-B6B4-F4310F314EB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HubMock", "HubMock\HubMock.csproj", "{2374A1F3-92FC-47DD-99AD-03A27847DB77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HubMock", "HubMock\HubMock.csproj", "{2374A1F3-92FC-47DD-99AD-03A27847DB77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateLearning", "DelegateLearning\DelegateLearning.csproj", "{CEFE0673-84BF-4A6A-BD31-284043C9944F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{42A11117-AE85-42C6-AD29-775AC4343915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,10 @@ Global
 		{2374A1F3-92FC-47DD-99AD-03A27847DB77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2374A1F3-92FC-47DD-99AD-03A27847DB77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2374A1F3-92FC-47DD-99AD-03A27847DB77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFE0673-84BF-4A6A-BD31-284043C9944F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +62,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{F36FE14D-67B7-4B07-B6B4-F4310F314EB6} = {F5497DDC-5745-4A81-BA1A-15333EFC6985}
 		{2374A1F3-92FC-47DD-99AD-03A27847DB77} = {F5497DDC-5745-4A81-BA1A-15333EFC6985}
+		{CEFE0673-84BF-4A6A-BD31-284043C9944F} = {F5497DDC-5745-4A81-BA1A-15333EFC6985}
+		{42A11117-AE85-42C6-AD29-775AC4343915} = {F5497DDC-5745-4A81-BA1A-15333EFC6985}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6A49FD41-AEC0-4EAA-9752-46AE6E9001F3}

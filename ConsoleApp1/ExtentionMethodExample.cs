@@ -17,7 +17,7 @@ namespace ConsoleApp1
 
             var x = anyNumber.IsEvenOrOddWithThisKeyword();
 
-            //var y=anyNumber.IsEvenOrOddWithoutThisKeyword(); // this is error
+           // var y = anyNumber.IsEvenOrOddWithoutThisKeyword(); // this is error
             bool y = ExtensionClass.IsEvenOrOddWithoutThisKeyword(2);
 
             List<Student> studentList = new List<Student>()
@@ -25,17 +25,17 @@ namespace ConsoleApp1
                 new Student() { Name = "Vishnu", RollNo = 12 },
                 new Student() { Name = "Vipin", RollNo = 110 }
             };
-            string[] stringArray = new string[] { "Hello", "World", "C#", "Programming", "Example" };
+            string[] stringArray = new string[] { "Hello1", "World", "C#", "Programming", "Example" };
 
 
             bool isPresent = studentList.IsPresent(x => x.Name == "vishnukumar ospsosns");
             bool b = stringArray.IsPresent(x => x == "C#");
 
-           List<int>? newList= new List<int> { 1,2,1,3,1,3}.MyFilter(x => x == 3);
+            List<int>? newList = new List<int> { 1, 2, 1, 3, 1, 3 }.MyFilter(x => x == 3);
 
             var students = studentList.MyFilter2(x => x.RollNo == -4).FirstOrDefault();
 
-            1.MultiplyBy(2);
+            var x1 = 1.MultiplyBy<int, int, int>(2);
 
         }
     }
@@ -77,7 +77,7 @@ namespace Extension
             return result;
         }
 
-        public static IEnumerable<TSource> MyFilter2<TSource>(this IEnumerable<TSource> sources,  Func<TSource, bool> predicate) where TSource: class
+        public static IEnumerable<TSource> MyFilter2<TSource>(this IEnumerable<TSource> sources, Func<TSource, bool> predicate) where TSource : class
         {
             List<TSource> result = new List<TSource>();
             foreach (TSource source in sources)
@@ -88,13 +88,16 @@ namespace Extension
                 }
             }
 
-            return result.Count>0 ? result : new List<TSource>();
+            return result.Count > 0 ? result : new List<TSource>();
         }
 
-        public static T2 MultiplyBy<T1,T2>(this T1 t1, T2 t2)
+        public static T3 MultiplyBy<T1, T2, T3>(this T1 t1, T2 t2)
         {
 
-            return t2;
+            dynamic dynamicT1 = t1;
+            dynamic dynamicT2 = t2;
+
+            return (T3)(dynamicT1 * dynamicT2);
         }
     }
 }

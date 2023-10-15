@@ -17,7 +17,7 @@
 //    class A
 //    {
 
-//        public void Hello(out int x)
+//        public void Hello1(out int x)
 //        {
 //            x = 30;
 //        }
