@@ -17,8 +17,8 @@ namespace Delegate2
             studentList.Add(new Student { Name = "Alice", Age = 22 });
             studentList.Add(new Student { Name = "Bob", Age = 21 });
 
-            Student? student= studentList.CustomFilter((x) => { return x.Name == "Bob"; }).FirstOrDefault();
-            Console.WriteLine(  student);
+           // Student? student= studentList.CustomFilter((x) => { return x.Name == "Bob"; }).FirstOrDefault();
+           // Console.WriteLine(  student);
         }
     }
 }
@@ -45,6 +45,9 @@ namespace SampleName
 
         public Func<int,char,string>? action3;
 
+        public EventHandler<Student> studentCreated;
+
+
 
         public void RunAllMyLogic()
         {
@@ -54,6 +57,8 @@ namespace SampleName
             _delegate1 += () => { Console.WriteLine("Hello"); };
 
 
+          
+            studentCreated.Invoke(this, new Student());
 
             action += SendEmail;
             action.Invoke();
@@ -111,9 +116,14 @@ namespace SampleName
 
             return "hello";
         }
+
+        public void SendSMS3(Object sender,Student student)
+        {
+            Console.WriteLine("SMS Sending");
+        }
     }
 
-    record Student
+    class Student
     {
         public string Name { get; set; }
        public int Age { get; set; }
