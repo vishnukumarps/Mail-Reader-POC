@@ -1,17 +1,22 @@
-﻿using HubMock;
-using Microsoft.AspNetCore.Mvc;
+﻿
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using Microsoft.AspNetCore.Mvc;
+using Sample.ExceptionFilters;
+using System;
+using System.Net;
+using System.Net.Http;
+using System.Web.Http.Filters;
 
 namespace Sample.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [TypeFilter(typeof(CustomExceptionFilter))]
     public class TestController : ControllerBase
     {
         // GET: api/<TestController>
         [HttpGet]
-        [CustomAttribute("Admin","TeamAdmin")]
+        //[CustomAttribute("Admin","TeamAdmin")]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
@@ -19,9 +24,10 @@ namespace Sample.Controllers
 
         // GET api/<TestController>/5
         [HttpGet("{id}")]
-        [CustomAttribute()]
+       
         public string Get(int id)
         {
+            throw new NotImplementedException();
             return "value";
         }
 
