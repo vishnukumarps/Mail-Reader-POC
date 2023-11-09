@@ -17,7 +17,7 @@ void Test()
 
     if (_operationHandler.ContainsKey(n))
     {
-        _operationHandler[n]();
+        _operationHandler[n].Invoke();
     }
 }
  void Sum()
