@@ -12,15 +12,19 @@ void Test()
                 {4, Subtract },
             };
 
+    var _operationHandler2 = new Dictionary<int,Func<int,int,Task<int>>>()
+            {
+               {22,async(a,b)=>await HandleCreateOrganizationRequest(1,2)}
+            };
     Console.WriteLine("Enter a number");
-    int n=Convert.ToInt32(Console.ReadLine());
+    int n = Convert.ToInt32(Console.ReadLine());
 
     if (_operationHandler.ContainsKey(n))
     {
         _operationHandler[n].Invoke();
     }
 }
- void Sum()
+void Sum()
 {
     Console.WriteLine("Sum");
 }
@@ -28,15 +32,20 @@ void Product()
 {
     Console.WriteLine("Product");
 }
- void Quotient()
+void Quotient()
 {
     //quotient
     Console.WriteLine("Quotient");
 }
 
- void Subtract()
+void Subtract()
 {
     Console.WriteLine("Subtract");
 }
 
 
+async Task<int> HandleCreateOrganizationRequest(int a, int b)
+{
+
+    return await Task.FromResult(1);
+}
